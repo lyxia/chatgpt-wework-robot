@@ -23,6 +23,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.xml());
 
+app.use(express.static('public'));
+
 /*health check for render*/
 app.get('/healthz', function (req, res, next) {
     res.status(200).end();
